@@ -1,0 +1,10 @@
+<button *ngFor="let dieOption of dieOptions" (click)="addDie(dieOption)">{{dieOption.name}}</button>
+<button *ngIf="dice.length" (click)="clearDice()">Clear Dice</button>
+<ul>
+  <li *ngFor="let die of dice">{{die.name}}</li>
+</ul>
+<button *ngIf="dice.length" (click)="rollResult()">Roll</button>
+<button *ngIf="result" (click)="clearResult()">Clear Roll</button>
+<h2 *ngIf="result">{{result}}</h2>
+
+
