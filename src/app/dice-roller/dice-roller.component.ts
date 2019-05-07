@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Die } from '../die';
+import { DiceSet } from '../dice-set';
 
 @Component({
   selector: 'app-dice-roller',
@@ -10,32 +11,19 @@ export class DiceRollerComponent implements OnInit {
 
   constructor() { }
 
-  dieOptions: Die[] = [];
+  dieOptions: number[] = [2, 3, 4, 6, 8, 10, 12, 20, 100];
+  diceSets: DiceSet[] = [];
   dice: Die[] = [];
   result: number = 0;
 
   ngOnInit()
   {
-    this.createDiceOptions();
+    
   }
 
-  createDiceOptions()
+  addDie(maxRoll: number): void
   {
-    this.addDieOption(4);
-    this.addDieOption(6);
-    this.addDieOption(8);
-    this.addDieOption(10);
-    this.addDieOption(12);
-    this.addDieOption(20);
-  }
-
-  addDieOption(maxRoll: number) {
-    this.dieOptions.push(new Die(maxRoll));
-  }
-
-  addDie(die: Die): void
-  {
-    this.dice.push(die);
+    this.dice.push(new Die(maxRoll));
   }
 
   clearDice(): void
@@ -47,6 +35,7 @@ export class DiceRollerComponent implements OnInit {
   clearResult(): void
   {
     this.result = 0;
+    this.dice.forEach(die => { die.clear(); })
   }
 
   rollResult(): void

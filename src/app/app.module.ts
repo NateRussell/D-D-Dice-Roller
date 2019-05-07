@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { DiceRollerComponent } from './dice-roller/dice-roller.component';
+import { DieComponent } from './die/die.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DiceRollerComponent
+    DiceRollerComponent,
+    DieComponent
   ],
   imports: [
     BrowserModule

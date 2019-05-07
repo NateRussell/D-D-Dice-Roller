@@ -3,8 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
-    "\\src\\app\\dice-roller"
+    "\\src\\app\\dice-roller",
+    "\\src\\app\\die"
   ],
-  "SelectedNode": "\\src\\app\\die.ts",
+  "SelectedNode": "\\src\\app\\dice-roller\\dice-roller.component.ts",
   "PreviewInSolutionExplorer": false
 }

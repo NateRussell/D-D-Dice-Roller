@@ -1,4 +1,4 @@
-<button *ngFor="let dieOption of dieOptions" (click)="addDie(dieOption)">{{dieOption.name}}</button>
+<button *ngFor="let dieOption of dieOptions" (click)="addDie(dieOption)">d{{dieOption}}</button>
 <button *ngIf="dice.length" (click)="clearDice()">Clear Dice</button>
 <ul>
   <li *ngFor="let die of dice">{{die.name}}</li>
